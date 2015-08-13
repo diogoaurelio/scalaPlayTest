@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "org.webjars"    %    "bootswatch-cerulean"   % "3.3.1+2",
   "org.webjars"    %    "html5shiv"             % "3.7.0",
   "org.webjars"    %    "respond"               % "1.4.2",
+  "com.typesafe.play" %% "play-mailer" % "3.0.1",
   specs2 % Test
 )
 
