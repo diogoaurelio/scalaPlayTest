@@ -6,4 +6,4 @@ person.lastname = last name
 person.enterlastname = enter last name
 email.email = email
 email.enteremail = enter email
-people.addperson
+people.addperson = Add Person

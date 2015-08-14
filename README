@@ -1,5 +1,18 @@
-This is your new Play application
+This is Play-scala-test application
 =================================
+
+#### The stack:
+- Play Framework 2.4.2
+- Scala 2.11.6
+- sbt 0.13.5
+- PostgreSQL 9.4-1200-jdbc41
+- Slick 1.0.1
+- Twitter Bootstrap 3.3.4
+- JQuery 1.9.3
+- "play-mailer" % "3.0.1",
+- Selenium 2.42.2
+- webjars (for Bootstrap and JQuery)
+- Heroku  (to add)
 
 This file will be packaged with your application, when using `activator dist`.
 
@@ -7,6 +20,6 @@ This file will be packaged with your application, when using `activator dist`.
 cd to root dir where this app was git cloned, and then type: activator run
 
 ## Configuration passwords
-Added secrets.conf in conf/ and in .gitignore , and included in application.conf
+Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in application.conf
 
 
