@@ -1,10 +1,10 @@
-@(title: String)(content: Html)
+@(title: String)(content: Html)(implicit messages: Messages)
 
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
-    <title>@title</title>
+    <title>@title | @Messages("global.appName") </title>
     <link rel="stylesheet" media="screen" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootswatch-cerulean", "bootstrap.min.css"))">
 
     <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
@@ -15,6 +15,7 @@
     <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
     </head>
     <body>
+
         @content
     </body>
 

@@ -8,3 +8,15 @@ target
 conf/secrets.conf
 /RUNNING_PID
 
+project/project
+tmp
+.history
+dist
+/.idea
+/*.iml
+/out
+test-2.11
+app-2.11
+/project/*-shim.sbt
+*-shim.sbt
+.DS_Store

@@ -5,23 +5,22 @@ import javax.inject._
 import dal._
 import play.api.data.Form
 import play.api.data.Forms._
-import play.api.data.validation.Constraints._
 import play.api.i18n._
 import play.api.libs.json.Json
 import play.api.mvc._
-
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
 class Application @Inject() (repo: PersonRepository, val messagesApi: MessagesApi) (implicit ec: ExecutionContext) extends Controller with I18nSupport {
 
-  val personForm: Form[CreatePersonForm] = Form {
+  val personForm = Form(
     mapping(
-      "name" -> nonEmptyText,
-      "age"  -> number.verifying(min(0), max(140))
-    )(CreatePersonForm.apply)(CreatePersonForm.unapply)
-  }
+      "firstname" -> text,
+      "lastname" -> text,
+      "email" -> nonEmptyText
+    )(PersonData.apply)(PersonData.unapply)
+  )
 
   def index = Action {
     // OK - means http status 200
@@ -34,7 +33,7 @@ class Application @Inject() (repo: PersonRepository, val messagesApi: MessagesAp
         Future.successful(Ok(views.html.index(errorForm)))
       },
       person => {
-        repo.create(person.name, person.age).map { _ =>
+        repo.create(person.firstname, person.lastname, person.email).map { _ =>
           Redirect(routes.Application.index())
         }
       }
@@ -57,4 +56,4 @@ class Application @Inject() (repo: PersonRepository, val messagesApi: MessagesAp
  * in a different way to your models.  In this case, it doesn't make sense to have an id parameter in the form, since
  * that is generated once it's created.
  */
-case class CreatePersonForm(name: String, age: Int)
+case class PersonData(firstname: String, lastname: String, email: String)

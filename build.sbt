@@ -9,7 +9,9 @@ scalaVersion := "2.11.6"
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "1.0.1",
   "com.typesafe.play" %% "play-slick-evolutions" % "1.0.1",
-  "com.h2database" % "h2" % "1.4.177",
+  //"com.h2database" % "h2" % "1.4.177",
+  "org.postgresql" % "postgresql" % "9.4-1200-jdbc41",
+  "org.seleniumhq.selenium" % "selenium-java" % "2.42.2",
   "org.webjars" %% "webjars-play" % "2.4.0-1",
   "org.webjars" % "bootstrap" % "3.3.4",
   "org.webjars"    %    "bootswatch-cerulean"   % "3.3.1+2",

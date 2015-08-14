@@ -2,3 +2,11 @@ This is your new Play application
 =================================
 
 This file will be packaged with your application, when using `activator dist`.
+
+## Run this app
+cd to root dir where this app was git cloned, and then type: activator run
+
+## Configuration passwords
+Added secrets.conf in conf/ and in .gitignore , and included in application.conf
+
+

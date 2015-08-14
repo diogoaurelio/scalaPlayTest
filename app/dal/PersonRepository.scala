@@ -28,11 +28,13 @@ class PersonRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(impli
   private class PeopleTable(tag: Tag) extends Table[Person](tag, "people") {
 
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+    //def id = column[Int]("id")
 
-    def name = column[String]("name")
+    def firstname = column[String]("firstname")
 
-    def age = column[Int]("age")
+    def lastname = column[String]("lastname")
 
+    def email = column[String]("email")
 
     /**
      * This is the tables default "projection".
@@ -42,15 +44,15 @@ class PersonRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(impli
      * In this case, we are simply passing the id, name and page parameters to the Person case classes
      * apply and unapply methods.
      */
-    def * = (id, name, age) <> ((Person.apply _).tupled, Person.unapply)
+    def * = (id, firstname, lastname, email) <> ((Person.apply _).tupled, Person.unapply)
   }
   private val people = TableQuery[PeopleTable]
 
-  def create(name: String, age: Int): Future[Person] = db.run {
-    (people.map(p => (p.name, p.age))
+  def create(firstname: String, lastname: String, email: String): Future[Person] = db.run {
+    (people.map(p => (p.firstname, p.lastname, p.email))
       returning people.map(_.id)
-      into ((nameAgeEmail, id) => Person(id, nameAgeEmail._1, nameAgeEmail._2))
-      ) += (name, age)
+      into ((firstnameLastnameEmail, id) => Person(id, firstnameLastnameEmail._1, firstnameLastnameEmail._2, firstnameLastnameEmail._3))
+      ) += (firstname, lastname, email)
   }
 
   /**

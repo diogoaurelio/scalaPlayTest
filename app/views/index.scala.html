@@ -1,4 +1,4 @@
-@(person: Form[CreatePersonForm])(implicit messages: Messages)
+@(personForm: Form[PersonData])(implicit messages: Messages)
 
 @import helper._
 
@@ -8,13 +8,51 @@
 <ul id="persons">
 
 </ul>
-<form action="@routes.Application.addPerson()" method="POST">
-    Name: <input name="name" type="text">
-    Age: <input name="age" type="text" >
 
-    <div class="buttons">
-        <input type="submit" value="Add Person"/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-lg-offset-1 col-md-4 col-lg-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
     </div>
-</form>
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+            @if(personForm.hasGlobalErrors) {
+            <ul>
+                @personForm.globalErrors.foreach { error =>
+                <li>error.message</li>
+                }
+            </ul>
+            }
+            @helper.form(action = routes.Application.addPerson()) {
+           <!-- <form action="routes.Application.addPerson()" method="POST"> -->
+                <fieldset>
+                <h4>@Messages("signup.hearaboutlaunch")</h4>
+                @inputText(
+                    personForm("firstname"), '_label -> Messages("person.firstname"),
+                    'placeholder -> Messages("person.enterfirstname"),
+                    '_showErrors -> true, '_showConstraints -> true
+                )
 
+                @inputText(
+                    personForm("lastname"), '_label -> Messages("person.lastname"),
+                    'placeholder -> Messages("person.enterlastname"), '_showErrors -> true,
+                    '_showConstraints -> true
+                )
+                @inputText(
+                    personForm("email"), '_label -> Messages("email.email"),
+                    'placeholder -> Messages("email.enteremail"), '_showErrors -> true,
+                    '_help -> Messages("email.enteremail")
+                )
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="submit" value="Add Person"/>
+                </div>
+            <!-- </form> -->
+            }
+
+        </div>
+    </div>
+</div>
 }
