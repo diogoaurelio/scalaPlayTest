@@ -1,0 +1,9 @@
+global.appName = play-scala-test-en
+signup.hearaboutlaunch = Contact us
+person.firstname = first name
+person.enterfirstname = enter first name
+person.lastname = last name
+person.enterlastname = enter last name
+email.email = email
+email.enteremail = enter email
+people.addperson
