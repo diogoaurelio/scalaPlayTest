@@ -22,4 +22,13 @@ cd to root dir where this app was git cloned, and then type: activator run
 ## Configuration passwords
 Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in application.conf
 
+## Helpful resources
+https://www.playframework.com/documentation/2.2.x/ScalaForms
+http://www.hawkinsunlimited.com/play-framework-playful-prelaunch-tutorial-part-1/
+https://github.com/michaelhawkins/playful-prelaunch/blob/master/app/controllers/Marketing.scala
+https://www.playframework.com/documentation/2.3.x/Evolutions
+https://www.playframework.com/documentation/2.4.x/ScalaI18N
+http://gon.to/2012/11/24/play-framework-2-2-1-scala-with-slick-made-easy-with-example/
+https://github.com/mgonto/slick-play2-example
+
 
