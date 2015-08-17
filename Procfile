@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/play-scala-test -Dhttp.port=${PORT} -Dplay.evolutions.db.default.autoApply=true -Ddb.default.url=${DATABASE_URL} -Ddb.default.driver=org.postgresql.Driver
+web: target/universal/stage/bin/play-scala-test -Dconfig.file=conf/heroku.conf -Dhttp.port=${PORT} -Dplay.evolutions.db.default.autoApply=true -Ddb.default.url=${DATABASE_URL} -Ddb.default.driver=org.postgresql.Driver

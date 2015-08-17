@@ -27,15 +27,19 @@ Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in applic
 git push heroku master #deploy app
 heroku pg:credentials #view pg credentials
 heroku config:set DATABASE_URL=postgres://user:password@host:5432/db
- user=user password=pass
+heroku config:set slick.dbs.default.db.user=user slick.dbs.default.db.password=password
 heroku logs #view logs
 heroku config:set S3_KEY=key S3_SECRET=secret
 
+#downloading pg_dump:
+heroku pg:backups capture
+curl -o latest.dump `heroku pg:backups public-url`
 
 ## Heroku useful resources
 https://devcenter.heroku.com/articles/getting-started-with-scala#use-a-database
 https://devcenter.heroku.com/articles/config-vars
 https://toolbelt.heroku.com/windows
+https://devcenter.heroku.com/articles/heroku-postgres-import-export
 
 
 ## Helpful resources
