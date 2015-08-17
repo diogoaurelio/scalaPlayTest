@@ -22,6 +22,22 @@ cd to root dir where this app was git cloned, and then type: activator run
 ## Configuration passwords
 Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in application.conf
 
+
+## Heroku useful commands
+git push heroku master #deploy app
+heroku pg:credentials #view pg credentials
+heroku config:set DATABASE_URL=postgres://user:password@host:5432/db
+ user=user password=pass
+heroku logs #view logs
+heroku config:set S3_KEY=key S3_SECRET=secret
+
+
+## Heroku useful resources
+https://devcenter.heroku.com/articles/getting-started-with-scala#use-a-database
+https://devcenter.heroku.com/articles/config-vars
+https://toolbelt.heroku.com/windows
+
+
 ## Helpful resources
 https://www.playframework.com/documentation/2.2.x/ScalaForms
 http://www.hawkinsunlimited.com/play-framework-playful-prelaunch-tutorial-part-1/
