@@ -5,6 +5,9 @@ import org.specs2.runner.JUnitRunner
 import play.api.test._
 import play.api.test.Helpers._
 import play.api.i18n.Messages @RunWith(classOf[JUnitRunner])
+import views.html.marketing.about
+
+
 
 
 /**

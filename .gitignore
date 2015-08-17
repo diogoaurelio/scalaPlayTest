@@ -20,3 +20,4 @@ app-2.11
 /project/*-shim.sbt
 *-shim.sbt
 .DS_Store
+npm_modules

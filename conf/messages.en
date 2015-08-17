@@ -1,4 +1,5 @@
 global.appName = play-scala-test-en
+global.about_us = About us
 signup.hearaboutlaunch = Contact us
 person.firstname = first name
 person.enterfirstname = enter first name
