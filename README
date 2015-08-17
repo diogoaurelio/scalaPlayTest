@@ -7,6 +7,7 @@ This is Play-scala-test application
 - sbt 0.13.5
 - PostgreSQL 9.4-1200-jdbc41
 - Slick 1.0.1
+- HikariCP 2.3.5
 - Twitter Bootstrap 3.3.4
 - JQuery 1.9.3
 - "play-mailer" % "3.0.1",
@@ -40,6 +41,8 @@ https://devcenter.heroku.com/articles/getting-started-with-scala#use-a-database
 https://devcenter.heroku.com/articles/config-vars
 https://toolbelt.heroku.com/windows
 https://devcenter.heroku.com/articles/heroku-postgres-import-export
+http://edulify.github.io/play-hikaricp.edulify.com/
+https://github.com/brettwooldridge/HikariCP#initialization
 
 
 ## Helpful resources

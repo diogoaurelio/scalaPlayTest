@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick-evolutions" % "1.0.1",
   //"com.h2database" % "h2" % "1.4.177",
   "org.postgresql" % "postgresql" % "9.4-1200-jdbc41",
-  "com.edulify" %% "play-hikaricp" % "2.0.6",
+  //"com.edulify" %% "play-hikaricp" % "2.0.6",
   "org.seleniumhq.selenium" % "selenium-java" % "2.42.2",
   "org.webjars" %% "webjars-play" % "2.4.0-1",
   "org.webjars" % "bootstrap" % "3.3.4",
