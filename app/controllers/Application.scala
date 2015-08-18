@@ -22,7 +22,7 @@ class Application @Inject() (repo: PersonRepository, val messagesApi: MessagesAp
     )(PersonData.apply)(PersonData.unapply)
   )
 
-  def index = Action {
+  def index = Action { implicit request =>
     // OK - means http status 200
     Ok(views.html.index(personForm))
   }
@@ -34,7 +34,8 @@ class Application @Inject() (repo: PersonRepository, val messagesApi: MessagesAp
       },
       person => {
         repo.create(person.firstname, person.lastname, person.email).map { _ =>
-          Redirect(routes.Application.index())
+          //Redirect(routes.Application.index())
+          Ok(views.html.registration.registrationSuccess(person.firstname, person.lastname, person.email) )
         }
       }
     )

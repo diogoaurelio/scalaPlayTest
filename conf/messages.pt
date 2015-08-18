@@ -1,8 +1,8 @@
-global.appName = play-scala-test-en-aha
-global.about_us = About us
-global.how_it_works = How it works
-global.thankyoureg = Thank you, we will contact you as soon as possible.
-signup.hearaboutlaunch = Contact us
+global.appName = play-scala-test-pt
+global.about_us = Sobre nos
+global.how_it_works = Comeq funca esta cena
+global.thankyoureg = Obrigado, iremos contactá-lo assim que possível.
+signup.hearaboutlaunch = Contacte-nos
 person.firstname = first name
 person.enterfirstname = enter first name
 person.lastname = last name

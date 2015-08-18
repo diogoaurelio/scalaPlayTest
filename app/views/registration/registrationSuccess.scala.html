@@ -1,0 +1,19 @@
+@(firstname: String, lastname: String, email: String)(implicit messages: Messages)
+
+@import helper._
+
+@main(Messages("global.thankyoureg") ) {
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    Hello @firstname @lastname,
+                </p>
+                <p>
+                    Thank you for signing up for more stuff. As soon as possible we will email you at @email
+                </p>
+                <p>The @Messages("global.appName") Team</p>
+            </div>
+        </div>
+    </div>
+}

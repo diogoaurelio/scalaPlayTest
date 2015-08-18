@@ -23,6 +23,8 @@ cd to root dir where this app was git cloned, and then type: activator run
 ## Configuration passwords
 Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in application.conf
 
+## I18n
+http://www.innovaedge.com/2015/06/18/adding-internationalization-to-a-scalaplayframework-2-4-application/#comment-3
 
 ## Heroku useful commands
 git push heroku master #deploy app
