@@ -23,6 +23,19 @@ cd to root dir where this app was git cloned, and then type: activator run
 ## Configuration passwords
 Add secrets.conf in conf/ and in .gitignore , and include secrets.conf in application.conf
 
+## Mailer
+For Mandril, please add 'mandrillKey="your-key-here"' to your secrets.conf file.
+https://github.com/sergkh/play-mandrill
+http://stackoverflow.com/questions/30208339/play-framework-2-3-x-unable-to-send-emails-using-plugin-play-mailer
+http://nitindhar.com/post/117688674811/blazzzing-fast-transactional-emails-using-play
+http://www.innovaedge.com/2015/07/02/mailing-stuff-out-with-playscala/
+
+For heroku:
+heroku config:set mandrillKey=your-key-here
+
+
+Reference: https://github.com/playframework/play-mailer
+
 ## I18n
 http://www.innovaedge.com/2015/06/18/adding-internationalization-to-a-scalaplayframework-2-4-application/#comment-3
 

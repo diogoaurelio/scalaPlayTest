@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   "org.webjars"    %    "html5shiv"             % "3.7.0",
   "org.webjars"    %    "respond"               % "1.4.2",
   "com.typesafe.play" %% "play-mailer" % "3.0.1",
+  ws,
   specs2 % Test
 )
 
